@@ -2,7 +2,7 @@ import pytest
 from app.calculator import add, subtract, divide, multiply
 
 @pytest.mark.parametrize("x, y, expected", [
-    (2, 2, 3),
+    (2, 2, 4),
     (-1, 1, 0),
     (0, 0, 0),
     (100, 200, 300),
