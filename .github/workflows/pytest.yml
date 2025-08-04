@@ -27,3 +27,13 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest --cov=app --cov-report=term --cov-report=xml
+
+# 上傳覆蓋率報告至 Codecov
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        # (可選) 指定覆蓋率報告的路徑
+        # files: ./coverage/clover.xml,./coverage/cobertura-coverage.xml
+        # (可選) 指定報告名稱
+        # name: codecov-umbrella
